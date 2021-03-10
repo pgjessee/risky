@@ -12,6 +12,9 @@ psycopg2-binary = "*"
 wtforms = "*"
 flask-wtf = "*"
 flask-login = "*"
+werkzeug = "*"
+flask-cors = "*"
+flask-migrate = "*"
 
 [dev-packages]
 pylint = "*"
