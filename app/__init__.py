@@ -8,6 +8,7 @@ from flask_login import LoginManager
 from app.models import db
 from .config import Config
 from .models import *
+from .api.user_routes import user_routes
 
 from .seeds import seed_commands
 
@@ -17,8 +18,6 @@ app.config.from_mapping({
     'SQLALCHEMY_TRACK_MODIFICATIONS': False,
 })
 
-db.init_app(app)
-Migrate(app, db)
 
 login = LoginManager(app)
 login.login_view = 'auth.unauthorized'
@@ -31,8 +30,13 @@ def load_user(id):
 app.cli.add_command(seed_commands)
 
 app.config.from_object(Config)
-
+app.register_blueprint(user_routes, url_prefix='/api/users')
 db.init_app(app)
 Migrate(app, db)
 
 CORS(app)
+
+
+@app.route('/')
+def home():
+    return "<h1>Hello World!</h1>"
