@@ -16,6 +16,7 @@ werkzeug = "*"
 flask-cors = "*"
 flask-migrate = "*"
 alembic = "*"
+requests = "*"
 
 [dev-packages]
 pylint = "*"
