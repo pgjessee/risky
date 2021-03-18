@@ -22,12 +22,15 @@ def utilize_individual_product(id):
             reviews = [review.to_dict() for review in reviews]
         else:
             reviews = []
-        url = f"https://openapi.etsy.com/v2/listings/{id}?api_key={API_KEY}"
+        # url = f"https://openapi.etsy.com/v2/listings/{id}?api_key={API_KEY}"
+        url = f"https://openapi.etsy.com/v2/listings/{id}?&includes=Images:1&api_key={API_KEY}"
         # url = f"https://openapi.etsy.com/v2/listings/{id}/images?api_key={API_KEY}"
         res = requests.get(url)
         res = res.json()
-        # res = res["results"][0]
+        res = res["results"][0]
+        res_images = res["Images"][0]
         res["reviews"] = reviews
+        res["images"] = res_images
         return res
 
     if req_method == "POST":
