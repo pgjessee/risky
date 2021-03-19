@@ -15,6 +15,7 @@ class User(db.Model):
 
     # products = db.relationship('Product', secondary=reviews, back_populates='users')
     reviews = db.relationship('Review', back_populates='user')
+    orders = db.relationship('Order', back_populates='user')
 
     @property
     def password(self):

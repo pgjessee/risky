@@ -1,6 +1,6 @@
 from .db import db
 from .review import Review
-
+from .order import order_products
 
 # reviews = db.Table('reviews',
 #     db.Column('id', db.Integer, primary_key=True),
@@ -18,7 +18,8 @@ class Product(db.Model):
     etsy_product_id = db.Column(db.Integer, unique=True, nullable=False)
 
     # users = db.relationship('User', secondary=reviews, back_populates='products')
-    reviews = db.relationship('Review', back_populates='product')
+    reviews = db.relationship('Review', back_populates='products')
+    orders = db.relationship('Order', secondary=order_products, back_populates='products')
 
     def to_dict(self):
         return {
