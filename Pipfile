@@ -17,6 +17,7 @@ flask-cors = "*"
 flask-migrate = "*"
 alembic = "*"
 requests = "*"
+sentry-sdk = {extras = ["flask"], version = "*"}
 
 [dev-packages]
 pylint = "*"

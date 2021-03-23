@@ -61,7 +61,8 @@ def sign_up():
             first_name=form.data["first_name"],
             last_name=form.data["last_name"],
             email=form.data["email"],
-            hashed_password=form.data["hashed_password"]
+            hashed_password=form.data["password"],
+            zip=form.data["zip"]
         )
 
         db.session.add(user)
