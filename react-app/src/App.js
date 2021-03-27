@@ -1,6 +1,7 @@
 import React from 'react';
 
-import SplashPage from './components/SplashPage'
+import SplashPage from './components/SplashPage';
+import ProductPage from './components/ProductPage';
 
 function App() {
   return (
