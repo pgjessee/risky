@@ -3,7 +3,16 @@ import React from 'react';
 
 const HeaderBar = () => {
     return (
-        <h1>Hello</h1>
+        <div className="header-bar-container">
+            <div className='header-content-container'>
+                <form>
+                    <input
+                    type='text'
+                    placeholder='Search for anything'
+                    />
+                </form>
+            </div>
+        </div>
     )
 };
 

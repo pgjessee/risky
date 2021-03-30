@@ -8,6 +8,15 @@ API_KEY = os.environ.get('API_KEY')
 
 products_routes = Blueprint('products', __name__)
 
+@products_routes.route('/splash', methods=['GET'])
+def populate_splash_products():
+
+    url = None
+    res = requests.get(url)
+    res = res.json()
+    return res
+
+
 @products_routes.route('/<int:id>', methods=['GET', 'POST'])
 def utilize_individual_product(id):
 
