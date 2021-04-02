@@ -1,9 +1,14 @@
 import React from 'react';
 
+
+import HeaderBar from '../HeaderBar/index';
+
 const ProductPage = () => {
 
     return (
-        <h1>Hello</h1>
+        <div className="product-page-container">
+            <HeaderBar />
+        </div>
     )
 };
 

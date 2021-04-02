@@ -15,6 +15,7 @@ def populate_splash_products():
     res = requests.get(url)
     return res.json()
 
+
 @products_routes.route('/:search', methods=['GET'])
 def search_product(search):
 

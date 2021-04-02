@@ -1,9 +1,12 @@
 import React, { useEffect, useState } from 'react'
 
+import HeaderBar from '../HeaderBar/index';
 
 const SplashPage = () => {
     return (
-        <h1>Hello</h1>
+        <div className="splash-page-container">
+            <SplashPage />
+        </div>
     )
 }
 
