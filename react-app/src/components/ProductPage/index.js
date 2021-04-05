@@ -8,6 +8,9 @@ const ProductPage = () => {
     return (
         <div className="product-page-container">
             <HeaderBar />
+            <div className="product-page-body-container">
+
+            </div>
         </div>
     )
 };
