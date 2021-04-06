@@ -3,6 +3,8 @@ import React from 'react';
 
 import HeaderBar from '../HeaderBar/index';
 
+import './ProductPage.css'
+
 const ProductPage = () => {
 
     return (
